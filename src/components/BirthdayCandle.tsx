@@ -69,43 +69,43 @@ export default function BirthdayCandle() {
         {!isBlown ? (
           <div className="relative flex flex-col items-center">
             {/* Soft pulsing warm glow */}
-            <div className="absolute -top-3 w-8 h-8 rounded-full bg-amber-400/35 blur-md animate-pulse pointer-events-none" />
+            <div className="absolute -top-2.5 w-6 h-6 rounded-full bg-amber-400/35 blur-xs animate-pulse pointer-events-none" />
 
             {/* Candle flame */}
-            <div className="w-3.5 h-5 rounded-full bg-linear-to-t from-amber-500 via-yellow-300 to-white shadow-[0_0_12px_rgba(251,191,36,0.9)] animate-[bounce_1.2s_infinite] origin-bottom" />
+            <div className="w-3 h-4 rounded-full bg-linear-to-t from-amber-500 via-yellow-300 to-white shadow-[0_0_10px_rgba(251,191,36,0.9)] animate-[bounce_1.2s_infinite] origin-bottom" />
             
             {/* Candle wick */}
-            <div className="w-0.5 h-1.5 bg-neutral-800 -mt-0.5" />
+            <div className="w-0.5 h-1 bg-neutral-800 -mt-0.5" />
           </div>
         ) : (
           /* Sweet puff of smoke when blown */
-          <div className="relative flex flex-col items-center h-6.5 justify-end">
+          <div className="relative flex flex-col items-center h-5 justify-end">
             <span className="text-xs text-neutral-400 animate-fade-out pointer-events-none">
               💨
             </span>
-            <div className="w-0.5 h-1.5 bg-neutral-600" />
+            <div className="w-0.5 h-1 bg-neutral-600" />
           </div>
         )}
 
         {/* Birthday Candle Body (striped festive candle) */}
-        <div className="w-2.5 h-7 rounded-t-xs bg-linear-to-b from-rose-300 via-pink-400 to-rose-500 border-x border-t border-rose-300/80 shadow-xs relative overflow-hidden">
+        <div className="w-2 h-5 rounded-t-xs bg-linear-to-b from-rose-300 via-pink-400 to-rose-500 border-x border-t border-rose-300/80 shadow-xs relative overflow-hidden">
           <div className="absolute inset-0 opacity-40 bg-[repeating-linear-gradient(45deg,transparent,transparent_3px,#ffffff_3px,#ffffff_6px)]" />
         </div>
 
         {/* Mini Cute Cupcake Base */}
-        <div className="text-xl sm:text-2xl -mt-1 drop-shadow-xs">
+        <div className="text-base sm:text-lg -mt-1 drop-shadow-xs">
           🧁
         </div>
       </div>
 
       {/* Interactive prompt button / status */}
-      <div className="mt-1 flex items-center gap-1 text-[11px] sm:text-xs font-semibold">
+      <div className="mt-0.5 flex items-center gap-1 text-[10px] sm:text-xs font-semibold">
         {!isBlown ? (
-          <span className="px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-600 dark:text-amber-300 group-hover:bg-amber-400/25 transition-colors">
+          <span className="px-2.5 py-0.5 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-600 dark:text-amber-300 group-hover:bg-amber-400/25 transition-colors">
             Tap candle to make a wish 🎂
           </span>
         ) : (
-          <span className="px-3 py-1 rounded-full bg-rose-500/15 border border-rose-400/40 text-rose-500 animate-pulse">
+          <span className="px-2.5 py-0.5 rounded-full bg-rose-500/15 border border-rose-400/40 text-rose-500 animate-pulse">
             Your wish is made! Tap to relight ✨
           </span>
         )}

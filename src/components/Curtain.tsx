@@ -231,13 +231,14 @@ export default function Curtain({ children }: CurtainProps) {
           tiltX={tiltX}
         />
 
-        {/* Close Curtain Replay Button - Responsive Mobile-Centered Pill */}
+        {/* Close Curtain Replay Button - Responsive Bottom-Right Pill */}
         {isOpen && (
           <button
             onClick={triggerClose}
-            className="absolute bottom-5 left-1/2 -translate-x-1/2 sm:left-auto sm:right-8 sm:translate-x-0 z-40 px-5 py-2.5 rounded-full bg-black/85 hover:bg-black text-amber-300 border border-amber-500/50 text-[11px] sm:text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap"
+            className="absolute bottom-3 right-3 sm:bottom-5 sm:right-6 z-40 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/85 hover:bg-black text-amber-300 border border-amber-500/50 text-[10px] sm:text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap flex items-center gap-1.5"
           >
-            Close Curtain
+            <span>Close Curtain</span>
+            <span className="text-amber-400">✕</span>
           </button>
         )}
       </div>
