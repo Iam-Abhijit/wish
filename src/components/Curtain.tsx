@@ -9,6 +9,9 @@ import CurtainPanels, { CurtainPanelsHandle } from "./CurtainPanel";
 import CurtainContext from "./CurtainContext";
 import CelebrationCrackers from "./CelebrationCrackers";
 import FloatingHearts from "./FloatingHearts";
+import TouchSparkles from "./TouchSparkles";
+import CurtainHint from "./CurtainHint";
+import FloatingBalloons from "./FloatingBalloons";
 import { useGyroscope } from "@/hooks/useGyroscope";
 
 interface CurtainProps {
@@ -184,6 +187,9 @@ export default function Curtain({ children }: CurtainProps) {
           </div>
         </div>
 
+        {/* Floating Festive Birthday Balloons with gyroscope tilt */}
+        <FloatingBalloons tiltX={tiltX} />
+
         {/* Ambient Floating Hearts & Sparkles */}
         <FloatingHearts />
 
@@ -192,6 +198,9 @@ export default function Curtain({ children }: CurtainProps) {
 
         {/* Atmospheric Stage Lighting with Gyroscope optical shift */}
         <StageLighting tiltX={tiltX} tiltY={tiltY} />
+
+        {/* Interactive touch and click sparkle ripples */}
+        <TouchSparkles />
 
         {/* Clickable area when curtain is closed */}
         <div
@@ -204,6 +213,9 @@ export default function Curtain({ children }: CurtainProps) {
         >
           <CurtainPanels ref={panelsRef} tiltX={tiltX} />
         </div>
+
+        {/* Closed Curtain Prompt and directional guide */}
+        <CurtainHint />
 
         {/* Classic Theater Pelmet Valance */}
         <CurtainValance />

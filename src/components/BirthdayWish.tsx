@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useCurtain } from "./CurtainContext";
 import PolaroidCard from "./PolaroidCard";
+import BirthdayCandle from "./BirthdayCandle";
 
 export default function BirthdayWish() {
   const { isOpen } = useCurtain();
@@ -13,6 +14,7 @@ export default function BirthdayWish() {
   const badgeRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const messageRef = useRef<HTMLParagraphElement>(null);
+  const candleRef = useRef<HTMLDivElement>(null);
   const loveNoteRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -51,15 +53,23 @@ export default function BirthdayWish() {
           "-=0.4"
         )
 
-        // 5. Love note sign-off fades in
+        // 5. Birthday Candle pops up with bounce
         .fromTo(
-          loveNoteRef.current,
-          { y: 15, opacity: 0, scale: 0.95 },
-          { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.8)" },
+          candleRef.current,
+          { scale: 0.5, opacity: 0, y: 15 },
+          { scale: 1, opacity: 1, y: 0, duration: 0.6, ease: "back.out(2)" },
           "-=0.3"
         )
 
-        // 6. Celebration floating hearts and sparkles pop out
+        // 6. Love note sign-off fades in
+        .fromTo(
+          loveNoteRef.current,
+          { y: 15, opacity: 0, scale: 0.95 },
+          { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.8)" },
+          "-=0.3"
+        )
+
+        // 7. Celebration floating hearts and sparkles pop out
         .fromTo(
           ".sparkle-item",
           { scale: 0, opacity: 0, y: 15 },
@@ -96,6 +106,7 @@ export default function BirthdayWish() {
             badgeRef.current,
             titleRef.current,
             messageRef.current,
+            candleRef.current,
             loveNoteRef.current,
             ".sparkle-item",
           ],
@@ -162,6 +173,11 @@ export default function BirthdayWish() {
         >
           Thank you for bringing so much happiness, warmth, and laughter into my life. Every day with you is special, but today is all about celebrating you!
         </p>
+
+        {/* Interactive Birthday Candle */}
+        <div ref={candleRef} className="opacity-0 my-0.5">
+          <BirthdayCandle />
+        </div>
 
         {/* Romantic sign-off */}
         <div
