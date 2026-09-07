@@ -7,6 +7,8 @@ import CurtainValance from "./CurtainValance";
 import CurtainRope from "./CurtainRope";
 import CurtainPanels, { CurtainPanelsHandle } from "./CurtainPanel";
 import CurtainContext from "./CurtainContext";
+import CelebrationCrackers from "./CelebrationCrackers";
+import FloatingHearts from "./FloatingHearts";
 import { useGyroscope } from "@/hooks/useGyroscope";
 
 interface CurtainProps {
@@ -179,6 +181,12 @@ export default function Curtain({ children }: CurtainProps) {
         >
           {children}
         </div>
+
+        {/* Ambient Floating Hearts & Sparkles */}
+        <FloatingHearts />
+
+        {/* Celebration Poppers & Confetti Crackers on Curtain Open */}
+        <CelebrationCrackers />
 
         {/* Atmospheric Stage Lighting with Gyroscope optical shift */}
         <StageLighting tiltX={tiltX} tiltY={tiltY} />
