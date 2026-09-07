@@ -173,13 +173,15 @@ export default function Curtain({ children }: CurtainProps) {
       >
         {/* Stage contents behind the curtain with vivid 3D depth holographic tilt */}
         <div
-          className="absolute inset-0 z-0 overflow-y-auto flex items-center justify-center will-change-transform"
+          className="absolute inset-0 z-0 overflow-y-auto overflow-x-hidden flex flex-col items-center px-3 will-change-transform"
           style={{
             transform: `perspective(850px) rotateY(${(tiltX * 14).toFixed(1)}deg) rotateX(${(-tiltY * 12).toFixed(1)}deg) translateX(${(-tiltX * 18).toFixed(1)}px)`,
             transition: "transform 0.12s ease-out",
           }}
         >
-          {children}
+          <div className="my-auto w-full flex flex-col items-center justify-center pt-20 pb-24 sm:pt-24 sm:pb-24">
+            {children}
+          </div>
         </div>
 
         {/* Ambient Floating Hearts & Sparkles */}

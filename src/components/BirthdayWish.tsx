@@ -114,51 +114,51 @@ export default function BirthdayWish() {
   return (
     <div
       ref={containerRef}
-      className="w-full max-w-sm sm:max-w-md md:max-w-lg flex flex-col items-center justify-center relative z-10 px-4 py-2 select-text text-center"
+      className="w-full max-w-82.5 min-[380px]:max-w-90 sm:max-w-md md:max-w-lg flex flex-col items-center justify-center relative z-10 px-3.5 py-3.5 sm:px-6 sm:py-5 rounded-3xl bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border border-white/90 dark:border-white/15 shadow-[0_16px_40px_rgba(0,0,0,0.14)] select-text text-center transition-all duration-300"
     >
       {/* Interactive Polaroid Photo Card */}
-      <div ref={photoRef} className="opacity-0 mb-3 filter drop-shadow-md">
+      <div ref={photoRef} className="opacity-0 mb-2 sm:mb-2.5 filter drop-shadow-md">
         <PolaroidCard />
       </div>
 
       {/* Love badge */}
       <div
         ref={badgeRef}
-        className="opacity-0 px-4 py-1 rounded-full bg-rose-500/15 border border-rose-400/40 text-rose-500 text-[11px] sm:text-xs font-bold tracking-widest uppercase shadow-xs mb-2"
+        className="opacity-0 px-3.5 py-1 rounded-full bg-rose-500/10 border border-rose-400/35 text-rose-500 text-[10px] min-[380px]:text-[11px] sm:text-xs font-bold tracking-widest uppercase shadow-xs mb-1.5 sm:mb-2"
       >
         To My Favorite Person ❤️
       </div>
 
       {/* Animated Title with Warm Golden Rose Gradient */}
-      <div className="relative flex items-center justify-center w-full">
+      <div className="relative flex items-center justify-center w-full my-0.5 sm:my-1">
         {/* Floating hearts and sparkles */}
-        <span className="sparkle-item opacity-0 absolute -top-5 left-2 sm:-left-4 text-xl sm:text-2xl pointer-events-none select-none">
+        <span className="sparkle-item opacity-0 absolute -top-3.5 -left-1 sm:-left-3 text-lg sm:text-2xl pointer-events-none select-none">
           💖
         </span>
-        <span className="sparkle-item opacity-0 absolute -top-4 right-2 sm:-right-4 text-xl sm:text-2xl pointer-events-none select-none">
+        <span className="sparkle-item opacity-0 absolute -top-3.5 -right-1 sm:-right-3 text-lg sm:text-2xl pointer-events-none select-none">
           ✨
         </span>
 
         <h1
           ref={titleRef}
-          className="opacity-0 text-2xl sm:text-4xl md:text-5xl font-black tracking-tight drop-shadow-xs text-center bg-linear-to-r from-amber-600 via-rose-500 to-amber-600 bg-clip-text text-transparent px-2"
+          className="opacity-0 text-xl min-[380px]:text-2xl sm:text-4xl md:text-5xl font-black tracking-tight leading-snug drop-shadow-xs text-center bg-linear-to-r from-amber-600 via-rose-500 to-amber-600 bg-clip-text text-transparent px-2"
         >
           Happy Birthday, My Love!
         </h1>
       </div>
 
       {/* Heartfelt Birthday Message */}
-      <div className="relative mt-2 w-full flex flex-col items-center gap-2.5">
-        <span className="sparkle-item opacity-0 absolute -bottom-2 -left-2 sm:left-2 text-lg sm:text-xl pointer-events-none select-none">
+      <div className="relative mt-1 sm:mt-1.5 w-full flex flex-col items-center gap-2 sm:gap-2.5">
+        <span className="sparkle-item opacity-0 absolute -bottom-1 -left-1 sm:left-1 text-base sm:text-xl pointer-events-none select-none">
           🌹
         </span>
-        <span className="sparkle-item opacity-0 absolute -bottom-3 -right-2 sm:right-2 text-lg sm:text-xl pointer-events-none select-none">
+        <span className="sparkle-item opacity-0 absolute -bottom-1 -right-1 sm:right-1 text-base sm:text-xl pointer-events-none select-none">
           💕
         </span>
 
         <p
           ref={messageRef}
-          className="opacity-0 text-xs sm:text-sm md:text-base text-foreground/90 font-medium leading-relaxed max-w-xs sm:max-w-sm md:max-w-md px-2"
+          className="opacity-0 text-xs min-[380px]:text-sm sm:text-base text-foreground/90 font-medium leading-relaxed max-w-70 min-[380px]:max-w-xs sm:max-w-md px-2"
         >
           Thank you for bringing so much happiness, warmth, and laughter into my life. Every day with you is special, but today is all about celebrating you!
         </p>
@@ -166,7 +166,7 @@ export default function BirthdayWish() {
         {/* Romantic sign-off */}
         <div
           ref={loveNoteRef}
-          className="opacity-0 mt-0.5 px-4 py-1.5 rounded-2xl bg-amber-500/10 border border-amber-400/30 text-xs sm:text-sm font-semibold text-amber-600 dark:text-amber-400"
+          className="opacity-0 mt-0.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-linear-to-r from-amber-500/15 via-rose-500/15 to-amber-500/15 border border-amber-400/35 text-[11px] min-[380px]:text-xs sm:text-sm font-semibold text-amber-600 dark:text-amber-400 shadow-xs"
         >
           I hope all your wishes come true. I love you! ❤️
         </div>

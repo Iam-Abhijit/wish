@@ -4,13 +4,13 @@ import React from "react";
 
 export default function CurtainValance() {
   return (
-    <div className="absolute top-0 left-0 w-full z-30 pointer-events-none drop-shadow-[0_20px_25px_rgba(0,0,0,0.85)]">
-      {/* Upper header bar */}
+    <div className="absolute top-0 left-0 w-full z-30 pointer-events-none drop-shadow-[0_15px_25px_rgba(0,0,0,0.85)]">
+      {/* Upper header bar - compact and sleek on mobile */}
       <div 
-        className="w-full h-10 sm:h-14 relative overflow-hidden"
+        className="w-full h-8 sm:h-12 relative overflow-hidden"
         style={{
           background: "linear-gradient(180deg, #1f0204 0%, #680d12 40%, #8b1118 70%, #47060a 100%)",
-          boxShadow: "inset 0 -4px 10px rgba(0,0,0,0.6)"
+          boxShadow: "inset 0 -3px 8px rgba(0,0,0,0.6)"
         }}
       >
         {/* Subtle vertical pleat lines */}
@@ -25,7 +25,7 @@ export default function CurtainValance() {
       </div>
 
       {/* Scalloped Swag Drape Pelmet */}
-      <div className="w-full relative -mt-1 flex justify-center items-start overflow-hidden h-14 sm:h-20">
+      <div className="w-full relative -mt-0.5 flex justify-center items-start overflow-hidden h-10 sm:h-16">
         <svg 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none" 
@@ -75,7 +75,7 @@ export default function CurtainValance() {
             "
             fill="none"
             stroke="url(#goldTrim)"
-            strokeWidth="4.5"
+            strokeWidth="4"
             strokeDasharray="6 3"
           />
         </svg>
